@@ -1,0 +1,49 @@
+###
+POST http://localhost:3000/auth/register
+Content-Type: application/json
+
+{
+    "username": "dguyonvarch",
+    "email": "guyonvarch-d@mgdis.fr",
+    "password": "test"
+}
+
+###
+POST http://localhost:3000/auth/login
+Content-Type: application/json
+
+{
+    "email": "guyonvarch-d@mgdi.fr",
+    "password": "test"
+}
+
+###
+GET http://localhost:3000/users/me
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIzYjcyN2VmYy1jNDE5LTRlZmYtOWFlZC1hOTNlMTY2YmEzM2IiLCJlbWFpbCI6Imd1eW9udmFyY2gtZEBtZ2Rpcy5mciIsImlhdCI6MTY1ODkyNjAyOCwiZXhwIjoxNjU4OTI2MzI4LCJhdWQiOiJhdWRpZW5jZSIsImlzcyI6Imlzc3VlciJ9.qCCp_2gEL_detUbhHWijjUyETkZob10Y6ctmWF1x4RM
+
+###
+POST http://localhost:3000/auth/refresh
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2NDAyNzM0NjYsImV4cCI6MTY0MDI3Mzc2NiwiYXVkIjoiYXVkaWVuY2UiLCJpc3MiOiJpc3N1ZXIiLCJzdWIiOiIwNTJhZjMyNC1jYjYyLTRhNTYtYjc2NS0wZTIyMWUwN2RiNWUifQ.KSi4MeSEXbCytI_Ui1BFmYiNxOCAypxZj49RvY0AaXg
+
+{
+    "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2NDAyNzM0NjYsImV4cCI6MTY0MTEzNzQ2NiwiYXVkIjoiYXVkaWVuY2UiLCJpc3MiOiJpc3N1ZXIiLCJzdWIiOiIwNTJhZjMyNC1jYjYyLTRhNTYtYjc2NS0wZTIyMWUwN2RiNWUifQ.uXYPOPZQY_1mnJiK6Evj3_FrDtrr4es4ynQiNsPeKKI"
+}
+
+###
+POST http://localhost:3000/auth/logout
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjNiNzI3ZWZjLWM0MTktNGVmZi05YWVkLWE5M2UxNjZiYTMzYiIsImlhdCI6MTY1NDc4OTA1OCwiZXhwIjoxNjU0Nzg5MzU4LCJhdWQiOiJhdWRpZW5jZSIsImlzcyI6Imlzc3VlciIsInN1YiI6IjNiNzI3ZWZjLWM0MTktNGVmZi05YWVkLWE5M2UxNjZiYTMzYiJ9.Q6YfGo6hVtH2hUyjyIGy_-R3HghSIiM5gNZmA8sZNdA#
+
+###
+GET http://localhost:3000/admin/health
+
+###
+PUT http://localhost:3000/admin/change-log-level
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImMxMzZjNTQxLTM5YmQtNDhjZC05MmQ4LTE0ZDUwNTc2OGZiZSIsImVtYWlsIjoiZ3V5b252YXJjaC1kQG1nZGlzLmZyIiwiaXNBZG1pbiI6dHJ1ZSwiaWF0IjoxNjU4OTM0MDYxLCJleHAiOjE2NTg5MzQzNjEsImF1ZCI6ImF1ZGllbmNlIiwiaXNzIjoiaXNzdWVyIiwic3ViIjoiYzEzNmM1NDEtMzliZC00OGNkLTkyZDgtMTRkNTA1NzY4ZmJlIn0.OZKUagbEyMIxPnxA4d2Z136mNTL8MPcQN6PkIkTkY3s
+
+{
+    "logLevel": "debug"
+}
